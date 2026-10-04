@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MorrowFirst | Global Export-Import & Documentation Services</title>
+    <meta name="description" content="MorrowFirst is a premium international export-import company specializing in tissue paper, paper cups, stationery items, and comprehensive export-import documentation services.">
+    <meta name="keywords" content="export import business, tissue paper export, paper cups supplier, stationery export, documentation services, MorrowFirst">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: '#064e3b',
+                        primaryLight: '#047857',
+                        baseText: '#1e293b',
+                        lightBg: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        .hero-overlay { background: linear-gradient(rgba(6, 20, 15, 0.75), rgba(6, 20, 15, 0.6)); }
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="font-sans text-baseText bg-lightBg antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent text-white py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-12">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="text-2xl font-bold tracking-tight">MorrowFirst</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="hover:text-primaryLight transition-colors font-medium">Home</a>
+                    <a href="#about" class="hover:text-primaryLight transition-colors font-medium">About Us</a>
+                    <a href="#products" class="hover:text-primaryLight transition-colors font-medium">Products</a>
+                    <a href="#services" class="hover:text-primaryLight transition-colors font-medium">Services</a>
+                    <a href="#documentation" class="hover:text-primaryLight transition-colors font-medium">Documentation</a>
+                    <a href="#contact" class="bg-primary hover:bg-primaryLight text-white px-5 py-2 rounded-md transition-colors font-medium shadow-sm">Get a Quote</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" class="text-current focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white text-baseText absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#home" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Home</a>
+                <a href="#about" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">About Us</a>
+                <a href="#products" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Products</a>
+                <a href="#services" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Services</a>
+                <a href="#documentation" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Documentation</a>
+                <a href="#contact" class="block px-3 py-2 text-primary font-bold">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('Hero%20image_2.jpg');">
+        <div class="absolute inset-0 hero-overlay" aria-hidden="true"></div>
+        <img src="Hero%20image_2.jpg" alt="Stacked shipping containers at an international cargo port, representing MorrowFirst's global export-import operations" class="sr-only">
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto fade-in-up">
+            <p class="uppercase tracking-widest text-emerald-300 font-semibold text-sm mb-4">International Export &amp; Import</p>
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+                Connecting Global Markets with Quality &amp; Trust
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                MorrowFirst is your reliable partner in international trade, specializing in premium paper products and seamless end-to-end export documentation.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-primary hover:bg-primaryLight text-white px-8 py-3 rounded-md font-semibold transition-all shadow-lg hover:shadow-xl">Get a Quote</a>
+                <a href="#products" class="bg-white hover:bg-gray-50 text-primary px-8 py-3 rounded-md font-semibold transition-all shadow-lg hover:shadow-xl">Explore Products</a>
+            </div>
+        </div>
+        <a href="#about" aria-label="Scroll to About section" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/80 hover:text-white transition-colors animate-bounce">
+            <i class="fa-solid fa-chevron-down text-xl"></i>
+        </a>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">About MorrowFirst</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        At MorrowFirst, we believe in bridging global boundaries with uncompromising quality and integrity. As a premier international export-import company, we have built our foundation on reliability, sustainability, and trust.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        From sourcing the finest eco-friendly tissue paper, robust paper cups, and premium stationery, to handling complex customs compliance, our mission is to make international trade seamless for our partners worldwide.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="border-l-4 border-primary pl-4">
+                            <p class="text-3xl font-bold text-gray-900">10+</p>
+                            <p class="text-sm text-gray-500 font-medium">Years Experience</p>
+                        </div>
+                        <div class="border-l-4 border-primary pl-4">
+                            <p class="text-3xl font-bold text-gray-900">50+</p>
+                            <p class="text-sm text-gray-500 font-medium">Countries Served</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative reveal">
+                    <img src="Hero%20image_2.jpg" alt="Cargo shipping containers loaded at a port" class="rounded-lg shadow-xl object-cover h-96 w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-lg shadow-lg hidden lg:block">
+                        <p class="font-bold text-xl">Global Reach.</p>
+                        <p class="text-sm">Local Expertise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Our Premium Products</h2>
+                <p class="text-gray-600">We export high-quality, sustainable paper and stationery products designed to meet international standards.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group reveal">
+                    <div class="h-64 overflow-hidden">
+                        <img src="tissue%20paper_2.jpg" alt="Rolls of premium tissue paper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Tissue Paper</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Soft, highly absorbent, and sustainably sourced tissue papers available in bulk for commercial and domestic distribution.</p>
+                        <a href="#contact" class="text-primary font-semibold hover:text-primaryLight flex items-center">Inquire Now <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group reveal">
+                    <div class="h-64 overflow-hidden">
+                        <img src="coffee%20cup_2.jpg" alt="Stack of eco-friendly disposable paper cups" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Paper Cups</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Durable, heat-resistant, and biodegradable paper cups perfect for cafes, corporate offices, and event organizers.</p>
+                        <a href="#contact" class="text-primary font-semibold hover:text-primaryLight flex items-center">Inquire Now <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group reveal">
+                    <div class="h-64 overflow-hidden">
+                        <img src="stationary_2.jpeg" alt="Assorted office and school stationery items" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Stationery Items</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">A comprehensive range of corporate and educational stationery, ensuring premium writing and organizational experiences.</p>
+                        <a href="#contact" class="text-primary font-semibold hover:text-primaryLight flex items-center">Inquire Now <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stationery Range -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Our Stationery Range</h2>
+                <p class="text-gray-600">A wide, export-ready catalogue of everyday stationery essentials, sourced and packed to international quality standards.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="bg-lightBg rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group reveal">
+                    <div class="h-40 overflow-hidden">
+                        <img src="pen.jpg" alt="Assorted ballpoint and gel pens" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center"><h3 class="font-bold text-gray-900">Pens</h3></div>
+                </div>
+                <div class="bg-lightBg rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group reveal">
+                    <div class="h-40 overflow-hidden">
+                        <img src="colour%20pencils_2.jpg" alt="Wooden pencils and colored pencils" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center"><h3 class="font-bold text-gray-900">Pencils &amp; Leads</h3></div>
+                </div>
+                <div class="bg-lightBg rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group reveal">
+                    <div class="h-40 overflow-hidden">
+                        <img src="markers%20and%20highlighters.jpg" alt="Colorful markers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center"><h3 class="font-bold text-gray-900">Markers &amp; Highlighters</h3></div>
+                </div>
+                <div class="bg-lightBg rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group reveal">
+                    <div class="h-40 overflow-hidden">
+                        <img src="notebook.jpg" alt="Stack of notebooks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center"><h3 class="font-bold text-gray-900">Notebooks</h3></div>
+                </div>
+                <div class="bg-lightBg rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group reveal">
+                    <div class="h-40 overflow-hidden">
+                        <img src="files%20and%20folder.jpg" alt="Files and folders" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center"><h3 class="font-bold text-gray-900">Files &amp; Folders</h3></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Services -->
+    <section id="documentation" class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Expert Export-Import Documentation</h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Navigating global trade regulations can be complex. At MorrowFirst, we don't just ship products; we provide comprehensive documentation services to ensure your cargo clears customs smoothly and compliantly, anywhere in the world.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-emerald-400 mr-3 text-xl"></i> Customs Clearance Paperwork</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-emerald-400 mr-3 text-xl"></i> Certificates of Origin &amp; Compliance</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-emerald-400 mr-3 text-xl"></i> Commercial Invoices &amp; Packing Lists</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check-circle text-emerald-400 mr-3 text-xl"></i> Bill of Lading &amp; Shipping Manifests</li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4 reveal">
+                    <img src="stationary.jpeg" alt="Customs and shipping documentation" class="rounded-lg shadow-md object-cover h-48 w-full mt-8">
+                    <img src="Hero%20image.jpg" alt="Shipping containers on a cargo vessel" class="rounded-lg shadow-md object-cover h-48 w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl font-bold text-gray-900">Why Choose MorrowFirst?</h2>
+                <div class="h-1 w-20 bg-primary mx-auto mt-4 rounded"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div class="text-center p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow bg-gray-50 reveal">
+                    <div class="w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center mb-4 shadow-md"><i class="fa-solid fa-award text-2xl"></i></div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-900">Quality Assurance</h3>
+                    <p class="text-sm text-gray-600">Strict quality control checks on all goods prior to global dispatch.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow bg-gray-50 reveal">
+                    <div class="w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center mb-4 shadow-md"><i class="fa-solid fa-earth-americas text-2xl"></i></div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-900">Global Shipping</h3>
+                    <p class="text-sm text-gray-600">Robust logistics network ensuring delivery to ports across the globe.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow bg-gray-50 reveal">
+                    <div class="w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center mb-4 shadow-md"><i class="fa-solid fa-tags text-2xl"></i></div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-900">Competitive Pricing</h3>
+                    <p class="text-sm text-gray-600">Direct sourcing allows us to offer market-leading pricing structures.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow bg-gray-50 reveal">
+                    <div class="w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center mb-4 shadow-md"><i class="fa-solid fa-file-signature text-2xl"></i></div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-900">End-to-End Docs</h3>
+                    <p class="text-sm text-gray-600">Complete handling of export-import documentation and compliance.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow bg-gray-50 reveal">
+                    <div class="w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center mb-4 shadow-md"><i class="fa-solid fa-truck-fast text-2xl"></i></div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-900">On-Time Delivery</h3>
+                    <p class="text-sm text-gray-600">Dependable scheduling that keeps your supply chain on track.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients / Countries Served -->
+    <section class="py-20 bg-lightBg border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Trusted Across the Globe</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-12">MorrowFirst ships to partners on five continents, from major seaports to inland distribution hubs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <i class="fa-solid fa-quote-left text-4xl text-gray-300 mb-6"></i>
+            <h3 class="text-2xl italic font-light text-gray-700 max-w-4xl mx-auto mb-6">
+                "MorrowFirst completely streamlined our supply chain. Their paper cup quality is unmatched, and having them handle the complex shipping documentation saved us countless hours."
+            </h3>
+            <p class="font-bold text-gray-900">— Sarah Jenkins, Purchasing Director</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="reveal">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900">Get in Touch</h2>
+                    <p class="text-gray-600 mb-8">Ready to elevate your global trade? Contact MorrowFirst for product quotes, documentation services, or partnership inquiries.</p>
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-location-dot text-primary text-xl mt-1 w-8"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Global Headquarters</h4>
+                                <p class="text-gray-600">100 Trade Center Drive, Suite 400<br>Business District, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-envelope text-primary text-xl mt-1 w-8"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Email Us</h4>
+                                <p class="text-gray-600">srbdeshp@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-phone text-primary text-xl mt-1 w-8"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Call &amp; WhatsApp</h4>
+                                <p class="text-gray-600">+91 77982 76942</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-id-card text-primary text-xl mt-1 w-8"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">GST No.</h4>
+                                <p class="text-gray-600">27BALPD6106L1ZM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-64 bg-gray-200 rounded-lg overflow-hidden shadow-inner flex items-center justify-center">
+                        <p class="text-gray-500 font-medium"><i class="fa-solid fa-map-location-dot mr-2"></i> Interactive Map Placeholder</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-8 border border-gray-100 reveal">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900">Send us a Message</h3>
+                    <form action="#" method="POST" class="space-y-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="john@company.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="Your Business Ltd.">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject / Interest</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-colors bg-white">
+                                <option>Tissue Paper Export</option>
+                                <option>Paper Cups Export</option>
+                                <option>Stationery Export</option>
+                                <option>Documentation Services</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-colors resize-none" placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-primaryLight text-white font-bold py-3 px-4 rounded-md transition-colors shadow-md">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-2xl font-bold tracking-tight mb-4">MorrowFirst</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Your trusted partner in international trade, exporting premium paper goods and providing end-to-end documentation solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="MorrowFirst on LinkedIn" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                        <a href="#" aria-label="MorrowFirst on Twitter" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-twitter text-xl"></i></a>
+                        <a href="#" aria-label="MorrowFirst on Facebook" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-facebook text-xl"></i></a>
+                        <a href="https://wa.me/917798276942" target="_blank" rel="noopener" aria-label="Chat with MorrowFirst on WhatsApp" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Products</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#products" class="hover:text-primaryLight transition-colors">Tissue Paper</a></li>
+                        <li><a href="#products" class="hover:text-primaryLight transition-colors">Paper Cups</a></li>
+                        <li><a href="#products" class="hover:text-primaryLight transition-colors">Pens</a></li>
+                        <li><a href="#products" class="hover:text-primaryLight transition-colors">Pencils &amp; Leads</a></li>
+                        <li><a href="#products" class="hover:text-primaryLight transition-colors">Markers &amp; Highlighters</a></li>
+                        <li><a href="#products" class="hover:text-primaryLight transition-colors">Notebooks</a></li>
+                        <li><a href="#products" class="hover:text-primaryLight transition-colors">Files &amp; Folders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#documentation" class="hover:text-primaryLight transition-colors">Customs Paperwork</a></li>
+                        <li><a href="#documentation" class="hover:text-primaryLight transition-colors">Certificates of Origin</a></li>
+                        <li><a href="#documentation" class="hover:text-primaryLight transition-colors">Compliance Support</a></li>
+                        <li><a href="#documentation" class="hover:text-primaryLight transition-colors">Shipping Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#about" class="hover:text-primaryLight transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-primaryLight transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primaryLight transition-colors">Terms of Service</a></li>
+                        <li><a href="#contact" class="hover:text-primaryLight transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500 space-y-1">
+                <p>GST No. 27BALPD6106L1ZM &nbsp;|&nbsp; Call/WhatsApp: +91 77982 76942 &nbsp;|&nbsp; srbdeshp@gmail.com</p>
+                <p>&copy; 2026 MorrowFirst. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md', 'text-gray-900');
+                navbar.classList.remove('bg-transparent', 'text-white');
+            } else {
+                navbar.classList.add('bg-transparent', 'text-white');
+                navbar.classList.remove('bg-white', 'shadow-md', 'text-gray-900');
+            }
+        });
+
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
